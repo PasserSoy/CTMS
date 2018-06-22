@@ -1,0 +1,18 @@
+// 主题颜色
+$theme-color:#ea5504;
+$btn-color:#f89e53;
+// 表格操作栏
+.operation {
+  margin-bottom: 30px;
+  // 新增按钮
+  .addbtn {
+    margin-right: 15px;
+  }
+  // 搜索
+  .search {
+    .search-btn {
+      float: right;
+      background: $btn-color url(../img/search.png) center center no-repeat;
+    }
+  }
+}

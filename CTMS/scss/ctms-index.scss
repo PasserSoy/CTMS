@@ -1,0 +1,197 @@
+// 主题颜色
+$theme-color:#ea5504;
+$btn-color:#f89e53;
+// 初始化
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6 { margin: 0; padding: 0 }
+h1,h2,h3,h4,h5,h6 { font-size: 100%; font-weight: normal }
+ul { list-style: none }
+button,input,select,textarea { margin: 0 }
+html { box-sizing: border-box }
+* { box-sizing: inherit }
+*:before,*:after { box-sizing: inherit }
+img,embed,object,audio,video { height: auto; max-width: 100% }
+iframe { border: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+td,th { padding: 0; text-align: center }
+body,html { background-color: #eff3f6; }
+// 菜单样式
+.my-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 170px;
+  background-color: #fff;
+  // box-shadow: 0 0 10px #333;
+  overflow: auto;
+  // 菜单的a标签
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    display: block;
+    cursor: pointer;
+    // 菜单里的图标
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .menu-icon {      
+      width: 31px;
+      height: 31px;
+      background-color: red;      
+    }
+    .menu-pull {
+      width: 10px;
+      height: 10px;
+      // background-color: orange;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 10px;
+    }
+    // 菜单里的文字
+    span {
+      margin: 0 15px;
+    }
+  }
+  // 菜单不同的图标
+  li {
+    // 选中样式
+    &.active {
+      &>a {
+        color: $theme-color;
+        &>.menu-icon {
+          background-position-x: -33px;
+        }
+      }
+    }
+    // 一级菜单
+    &>a {
+      height: 70px;
+      line-height: 70px;
+      padding-left: 35px;      
+      white-space: nowrap;
+      transition: all .2s;
+      &:hover {
+        color:$theme-color;
+        box-shadow: 0 0 10px #00000052;
+      }
+    }
+    &>a>.menu-icon{
+      background: url(../img/menu.png) 0 0 no-repeat;
+    }
+    &:nth-of-type(2)>a>.menu-icon {
+      background-position-y: -33px;
+    }
+    &:nth-of-type(3)>a>.menu-icon {
+      background-position-y: -66px;
+    }
+    &:nth-of-type(4)>a>.menu-icon {
+      background-position-y: -99px;
+    }
+    &:nth-of-type(5)>a>.menu-icon {
+      background-position-y: -132px;
+    }
+    &:nth-of-type(6)>a>.menu-icon {
+      background-position-y: -165px;
+    }
+    // 二级菜单
+    & ul li a {
+      padding-left: 68px;
+    }
+  }
+  // 二级菜单
+  .son {
+    display: none;
+  }
+}
+// 主页面框架样式
+.cont {
+  position: relative;
+  margin-left: 188px;
+  padding: 30px;
+  // height: 2000px;
+  background-color: #fff;
+  // box-shadow: 0 0 10px #333;
+  &:after {
+    content:'';
+    position: fixed;
+    left: 188px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #fff;
+  }
+  // echarts的公共样式
+  .charts {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .tit {
+      height: 35px;
+      line-height: 35px;
+      background-color: $theme-color;
+      color: #fff;
+      padding-left: 20px;
+    }
+    .echart {
+      height: 420px;
+    }
+  }
+  .layui-table, .layui-table-view {
+    margin: 0;
+  }
+}
+/* 表格样式 */
+.layui-table tbody tr:hover,.layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table[lay-even] tr:nth-child(even) {
+  background-color: $theme-color;
+  color: #fff;
+  .optlink {
+    color: #fff;
+  }
+}
+.layui-table tbody tr:hover, .layui-table-click {
+  opacity: .6;
+}
+.optlink {
+  cursor: pointer;
+  margin: 0 5px;
+  color: $theme-color;
+}
+// 按钮
+.layui-btn-warm {
+  background-color: $btn-color;
+}
+// 弹窗里的按钮
+.full {
+  width: 100%;
+  margin: 15px 0 20px;
+}
+// 工具栏
+.tool {
+  padding: 11px 0;
+  label {
+    padding-left: 0;
+  }
+  .layui-form-label {
+    width: auto;
+  }
+  .choosetime {
+    width: 300px;
+  }
+  .layui-form-item .layui-input-inline.myselect {
+    width: 100px;
+  }
+  .layui-form-item .layui-input-inline {
+    margin-bottom: 10px;
+  }
+}
+// layui下拉框
+body .layui-form-select dl dd.layui-this {
+  background-color: $theme-color;
+}
+.layui-form-select dl dd, .layui-form-select dl dt {
+  line-height: 25px;
+}

@@ -1,0 +1,46 @@
+// 主题颜色
+$theme-color:#ea5504;
+$btn-color:#f89e53;
+.cont {
+  padding-top: 80px;
+  .page {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 86px;
+    background-color: #fff;
+    z-index: 9;
+    &.alarm {
+      top: 15px;
+    }
+  }
+}
+// 头部状态栏
+.cont-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 20px 30px;
+  background-color: #eff3f6;
+}
+.statelink {
+  display: inline-block;
+  width: 83px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $theme-color;
+  }
+  &.active {
+    background-color: $theme-color;
+    color: #fff;
+  }
+}
